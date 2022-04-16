@@ -6,15 +6,16 @@ import java.util.Scanner;
 
 import punto13.Empleado;
 import punto15.Persona;
+import punto16.CalculoMatematico;
 
 public class Principal {
 	public static void main(String[]args) {	
 
-		//punto 13 op1
+		//punto 13 se ingresan valores a los atributos de los objetos desde el programa
 		LocalDate fech = LocalDate.of(2021,10,11);	
 		Empleado unempleado = new Empleado("fer", fech, 323, "fer@gmail", 123);
 		System.out.println(unempleado.getNombre()+" "+unempleado.getEmail()+" "+unempleado.getFechaIngreso()+" "+unempleado.getLegajo()+" "+unempleado.getHorasTrabajadas()+" "+unempleado.getSueldo());
-		// punto 13 op2
+		// punto 13 ingresamos valores a los atributos por teclado
 		Scanner scanner = new Scanner(System.in);
 		Empleado otroEmpleado = new Empleado();
 		//tomo nombre por teclado
@@ -53,17 +54,25 @@ public class Principal {
 		//nombre y horas trabajadas
 		Empleado cuarEmpleado = new Empleado("joaquin", 192);
 		//muestro los objetos creados
-		//preguntar si ay que formuar mas el mje de salida
 		System.out.println(primEmpleado.getNombre()+" "+primEmpleado.getLegajo()+" "+primEmpleado.getEmail()+" "+primEmpleado.getFechaIngreso()+" "+primEmpleado.getHorasTrabajadas()+" $"+primEmpleado.getSueldo()+" ");
 		System.out.println(terEmpleado.getNombre()+" "+terEmpleado.getLegajo()+" "+terEmpleado.getEmail()+" "+terEmpleado.getFechaIngreso()+" "+terEmpleado.getHorasTrabajadas()+" $"+terEmpleado.getSueldo()+" ");
 		System.out.println(segEmpleado.getNombre()+" "+segEmpleado.getLegajo()+" "+segEmpleado.getEmail()+" "+segEmpleado.getFechaIngreso()+" "+segEmpleado.getHorasTrabajadas()+" $"+segEmpleado.getSueldo()+" ");
 		System.out.println(cuarEmpleado.getNombre()+" "+cuarEmpleado.getLegajo()+" "+cuarEmpleado.getEmail()+" "+cuarEmpleado.getFechaIngreso()+" "+cuarEmpleado.getHorasTrabajadas()+" $"+cuarEmpleado.getSueldo()+" ");
 		
-		//punto 15 
+		//punto 15 ejemplificacion del objeto persona
 		LocalDate cumfech=LocalDate.of(1998, 11, 18);
 		Persona persona = new Persona("gabriel",cumfech);
 		System.out.println(persona.devolverInf());
 
+		//punto 16 ejemplificacion del objeto calculo matematico
+		CalculoMatematico unCalculo= new CalculoMatematico();
+		Scanner scan = new Scanner(System.in);
+		System.out.println("ingrese un numero: ");
+		int valor=scan.nextInt();
+		unCalculo.setN(valor);
+		System.out.println(unCalculo.calcularSumatoria());
+		System.out.println(unCalculo.calcularProductoria());
+		scan.close();
 	}
 	
 	
