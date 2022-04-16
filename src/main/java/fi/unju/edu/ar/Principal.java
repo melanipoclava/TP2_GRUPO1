@@ -5,6 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import punto13.Empleado;
+import punto15.Persona;
 
 public class Principal {
 	public static void main(String[]args) {	
@@ -58,6 +59,10 @@ public class Principal {
 		System.out.println(segEmpleado.getNombre()+" "+segEmpleado.getLegajo()+" "+segEmpleado.getEmail()+" "+segEmpleado.getFechaIngreso()+" "+segEmpleado.getHorasTrabajadas()+" $"+segEmpleado.getSueldo()+" ");
 		System.out.println(cuarEmpleado.getNombre()+" "+cuarEmpleado.getLegajo()+" "+cuarEmpleado.getEmail()+" "+cuarEmpleado.getFechaIngreso()+" "+cuarEmpleado.getHorasTrabajadas()+" $"+cuarEmpleado.getSueldo()+" ");
 		
+		//punto 15 
+		LocalDate cumfech=LocalDate.of(1998, 11, 18);
+		Persona persona = new Persona("gabriel",cumfech);
+		System.out.println(persona.devolverInf());
 
 	}
 	
