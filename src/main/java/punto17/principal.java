@@ -40,16 +40,16 @@ public class principal {
 		try {
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("ingrese fecha en este  formato dd/MM/yyyy");
+		System.out.println("b6 & b7) Ingrese fecha en este  formato dd/MM/yyyy"+"\n");
 		String fcha = scan.nextLine();
 		DateTimeFormatter formateador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDate dfech = LocalDate.parse(fcha, formateador);
 		ProcesosFecha pf5 = new ProcesosFecha();
 		pf5.setFecha1(dfech);
 		LocalDate dfech2 = pf5.incrementar(pf5.getFecha1(),365,"D");
-		System.out.println(pf5.getFecha1()+" ==>"+dfech2);
+		System.out.println(pf5.getFecha1()+" ==> "+dfech2);
 		 
-		System.out.println("b6 & b7) Ingrese fecha en este  formato dd/MM/yyyy");
+		System.out.println("Ingrese fecha en este  formato dd/MM/yyyy ");
 		String fcha1 = scan.nextLine();
 		LocalDate ffech = LocalDate.parse(fcha1, formateador);
 		pf5.setFecha2(ffech);
@@ -58,7 +58,7 @@ public class principal {
 		break;
 		}catch (DateTimeParseException e)
 		{
-			System.out.println(e);
+			System.out.println(e.getMessage());
 		}
 		}while (true);	
 	}
