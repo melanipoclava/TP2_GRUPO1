@@ -173,13 +173,13 @@ public class ProcesosFecha {
 		String rta;
 		//compara si fecha1 es despues que fecha2
 		if (fecha1.isAfter(fecha2))
-			rta= "la fecha "+fecha1+" es porterior a la fecha "+fecha2;
+			rta= "b3) La fecha "+fecha1+" es porterior a la fecha "+fecha2;
 		else
 			//compara si fecha1 es antes que fecha2
 			if (fecha1.isBefore(fecha2))
-				rta= "la fecha "+fecha1+" es anterior a la fecha "+fecha2;
+				rta= "b3) La fecha "+fecha1+" es anterior a la fecha "+fecha2;
 			else
-				rta= "la fecha "+fecha1+" y la fecha"+fecha2+"son iguales";
+				rta= "b3) La fecha "+fecha1+" y la fecha"+fecha2+"son iguales";
 			
 		return (rta);
 		
@@ -189,7 +189,7 @@ public class ProcesosFecha {
 	public void decremento() {
 		time1= time1.plusHours(5);
 		time2=time2.minusMinutes(20);
-		System.out.println("incrementado "+ time1 +" decremetado "+time2);
+		System.out.println("Incrementado: "+ time1 +" Decremetado: "+time2+"\n");
 			}
 	
 	//procesp incrementa deias usa las variables trasncurso para tomar el valor que se desea incrementar
