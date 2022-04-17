@@ -189,8 +189,9 @@ public class ProcesosFecha {
 	public void decremento() {
 		time1= time1.plusHours(5);
 		time2=time2.minusMinutes(20);
-		System.out.println(" incrementado "+ time1 +"decremetado"+time2);
+		System.out.println("incrementado "+ time1 +" decremetado "+time2);
 			}
+	
 	//procesp incrementa deias usa las variables trasncurso para tomar el valor que se desea incrementar
 	//y typo para diferenciar la opcion dia mes y año
 	public LocalDate incrementar(LocalDate fech,int transcurso, String typo) {
